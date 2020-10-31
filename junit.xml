@@ -1,52 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="5" failures="3" time="3.475">
-  <testsuite name="undefined" errors="0" failures="3" skipped="0" timestamp="2020-10-31T06:42:52" time="2.535" tests="5">
-    <testcase classname=" initial UI is rendered as expected and button works" name=" initial UI is rendered as expected and button works" time="0.036">
-      <failure>Error: expect(element).toHaveTextContent()
-
-Expected element to have text content:
-  All
-Received:
-  all
-    at Object.&lt;anonymous&gt; (/Users/itzel/Documents/Tests/omnitracs/toDo/src/App.test.js:30:20)
-    at Object.asyncJestTest (/Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
-    at /Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:43:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
-    at /Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:73:41
-    at processTicksAndRejections (node:internal/process/task_queues:93:5)</failure>
+<testsuites name="jest tests" tests="5" failures="0" time="3.268">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-10-31T07:45:07" time="2.275" tests="5">
+    <testcase classname=" initial UI is rendered as expected and button works" name=" initial UI is rendered as expected and button works" time="0.044">
     </testcase>
-    <testcase classname=" button adds notes" name=" button adds notes" time="0.02">
+    <testcase classname=" button adds notes" name=" button adds notes" time="0.015">
     </testcase>
-    <testcase classname=" Multiple notes can be added" name=" Multiple notes can be added" time="0.018">
-      <failure>Error: expect(element).toHaveTextContent()
-
-Expected element to have text content:
-  Movie
-Received:
-  Stocks investing
-    at Object.&lt;anonymous&gt; (/Users/itzel/Documents/Tests/omnitracs/toDo/src/App.test.js:77:43)
-    at Object.asyncJestTest (/Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
-    at /Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:43:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
-    at /Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:73:41</failure>
+    <testcase classname=" Multiple notes can be added" name=" Multiple notes can be added" time="0.017">
     </testcase>
-    <testcase classname=" Switching between buttons work" name=" Switching between buttons work" time="0.034">
-      <failure>Error: expect(element).toHaveTextContent()
-
-Expected element to have text content:
-  Movie
-Received:
-  Stocks investing
-    at Object.&lt;anonymous&gt; (/Users/itzel/Documents/Tests/omnitracs/toDo/src/App.test.js:130:43)
-    at Object.asyncJestTest (/Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
-    at /Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:43:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
-    at /Users/itzel/Documents/Tests/omnitracs/toDo/node_modules/jest-jasmine2/build/queueRunner.js:73:41</failure>
+    <testcase classname=" Switching between buttons work" name=" Switching between buttons work" time="0.046">
     </testcase>
-    <testcase classname=" In active tab, dont show completed notes" name=" In active tab, dont show completed notes" time="0.019">
+    <testcase classname=" In active tab, dont show completed notes" name=" In active tab, dont show completed notes" time="0.022">
     </testcase>
   </testsuite>
 </testsuites>

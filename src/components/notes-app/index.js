@@ -3,13 +3,14 @@ import "./index.css";
 
 function NotesApp() {
   const [toDoTasksObj, setToDoTasksObj] = useState({
-    all: [],
-    completed: [],
     active: [],
+    completed: [],
   });
   const [statusActive, setStatusActive] = useState("all");
   const [titleValue, setTitleValue] = useState("");
   const [statusValue, setStatusValue] = useState("");
+
+  const defaultCategories = ["active", "completed"];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -32,8 +33,12 @@ function NotesApp() {
     } else {
       const tasks = [];
       const categoriesArr = Object.keys(toDoTasksObj);
-      categoriesArr.forEach((categorie) => {
+      defaultCategories.forEach((categorie) => {
         if (toDoTasksObj[categorie].length > 0)
+          tasks.push(...toDoTasksObj[categorie]);
+      });
+      categoriesArr.forEach((categorie) => {
+        if (!defaultCategories.includes(categorie))
           tasks.push(...toDoTasksObj[categorie]);
       });
       return tasks;
@@ -86,15 +91,23 @@ function NotesApp() {
 
       <div className="mt-50">
         <ul className="tabs">
+          <li
+            className="tab-item slide-up-fade-in"
+            data-testid="allButton"
+            onClick={() => handleCategoriesChange("all")}
+          >
+            All
+          </li>
           {Object.keys(toDoTasksObj).map((categorie, index) => (
             <li
               key={`${categorie}-${index}`}
-              name={`${categorie}`}
               className="tab-item slide-up-fade-in"
               data-testid={`${categorie}Button`}
               onClick={() => handleCategoriesChange(categorie)}
             >
-              {`${categorie}`}
+              {defaultCategories.includes(categorie)
+                ? categorie.charAt(0).toUpperCase() + categorie.slice(1)
+                : categorie}
             </li>
           ))}
         </ul>
